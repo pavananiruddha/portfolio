@@ -3,71 +3,233 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pavan Aniruddha | Portfolio</title>
+  <title>Pavan Gottipati | Full-Stack Django + Python Developer</title>
+  <meta name="description" content="Portfolio of Pavan Gottipati — Full-Stack Django + Python Developer building production-ready apps and AI agent systems." />
+  <meta name="keywords" content="Pavan Gottipati, Django Developer, Python Developer, LangChain, LangGraph, Portfolio" />
+  <meta name="author" content="Pavan Gottipati" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <!-- NAV -->
   <header class="nav">
-    <h1 class="logo">Pavan</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="nav-inner">
+      <a class="brand" href="#">PG</a>
+      <nav class="links">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Hire / Contact</a>
+    </div>
   </header>
 
   <main class="container">
+
+    <!-- HERO -->
     <section class="hero">
-      <h2>Full-Stack Django + Python Developer</h2>
-      <p>AI Agents with LangChain, LangGraph, CrewAI</p>
-      <div class="btns">
-        <a class="btn" href="#projects">View Projects</a>
-        <a class="btn outline" href="#contact">Contact</a>
+      <div class="hero-left">
+        <p class="pill">Open to Internships · Fresher · Junior Roles</p>
+        <h1>
+          Full-Stack Django + Python Developer
+        </h1>
+        <p class="subtitle">
+          I build production-ready APIs, full-stack web apps, and AI agent workflows using
+          <strong>Django</strong>, <strong>PostgreSQL</strong>, <strong>DRF</strong>, and
+          <strong>LangChain/LangGraph</strong>.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+          <a class="btn outline" href="https://github.com/pavananiruddha" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn outline" href="https://www.linkedin.com/in/pavan-gottipati-95a0242bb" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Projects (building)</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">Python</div>
+            <div class="stat-label">Backend focus</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">AI Agents</div>
+            <div class="stat-label">LangChain / LangGraph</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="card big">
+          <p class="card-title">Currently building</p>
+          <h3>Job Application Tracker API</h3>
+          <p class="muted">
+            A backend system to track job applications, interviews, and follow-ups with secure auth and structured APIs.
+          </p>
+
+          <div class="tags">
+            <span>Django REST</span>
+            <span>JWT Auth</span>
+            <span>PostgreSQL</span>
+            <span>Swagger</span>
+          </div>
+
+          <div class="card-actions">
+            <a class="link" target="_blank" rel="noopener"
+               href="https://github.com/pavananiruddha/job-application-tracker-backend">
+              View Repo →
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="about" class="card">
-      <h3>About</h3>
-      <p>
-        I’m Pavan Aniruddha, a Python developer learning Django full-stack development
-        and building AI agent systems using LangChain and LangGraph.
-      </p>
-    </section>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section-head">
+        <h2>Featured Projects</h2>
+        <p class="muted">Not random projects — these are built to prove real backend + full-stack ability.</p>
+      </div>
 
-    <section id="skills" class="card">
-      <h3>Skills</h3>
-      <div class="tags">
-        <span>Python</span><span>Django</span><span>Django REST</span><span>PostgreSQL</span>
-        <span>Git/GitHub</span><span>LangChain</span><span>LangGraph</span><span>CrewAI</span>
+      <div class="projects-grid">
+
+        <!-- Featured -->
+        <article class="project featured">
+          <div>
+            <p class="project-kicker">FEATURED</p>
+            <h3>Job Application Tracker – Backend API</h3>
+            <p class="muted">
+              Backend API to manage job applications with authentication, clean endpoints, and structured data models.
+            </p>
+
+            <ul class="bullets">
+              <li>JWT authentication + protected routes</li>
+              <li>CRUD APIs with validation + clean responses</li>
+              <li>Ready for frontend integration</li>
+            </ul>
+
+            <div class="tags">
+              <span>Python</span>
+              <span>Django</span>
+              <span>DRF</span>
+              <span>PostgreSQL</span>
+              <span>JWT</span>
+              <span>Swagger</span>
+            </div>
+          </div>
+
+          <div class="project-actions">
+            <a class="btn small outline" href="https://github.com/pavananiruddha/job-application-tracker-backend" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn small" href="#contact">Request Demo</a>
+          </div>
+        </article>
+
+        <!-- Placeholder 2 -->
+        <article class="project">
+          <h3>AI Agent System (LangGraph Workflow)</h3>
+          <p class="muted">
+            Multi-agent routing workflow using LangGraph with tool-calling and structured outputs.
+          </p>
+          <div class="tags">
+            <span>Python</span><span>LangChain</span><span>LangGraph</span><span>CrewAI</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn small outline" href="#" target="_blank" rel="noopener">GitHub (soon)</a>
+            <a class="btn small outline" href="#" target="_blank" rel="noopener">Demo (soon)</a>
+          </div>
+        </article>
+
+        <!-- Placeholder 3 -->
+        <article class="project">
+          <h3>Django Full-Stack Dashboard App</h3>
+          <p class="muted">
+            Authentication + dashboard UI + CRUD + search/pagination for real-world web app workflow.
+          </p>
+          <div class="tags">
+            <span>Django</span><span>HTML</span><span>CSS</span><span>PostgreSQL</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn small outline" href="#" target="_blank" rel="noopener">GitHub (soon)</a>
+            <a class="btn small outline" href="#" target="_blank" rel="noopener">Live (soon)</a>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <section id="projects" class="card">
-      <h3>Projects</h3>
-
-      <div class="project">
-        <h4>AI Agent System</h4>
-        <p>Multi-agent workflow using LangChain + LangGraph with tool calling.</p>
-        <p class="meta">Tech: Python, LangChain, LangGraph</p>
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p class="muted">Focused on backend engineering + AI agent workflows.</p>
       </div>
 
-      <div class="project">
-        <h4>Django Full Stack App (Coming Soon)</h4>
-        <p>Authentication + CRUD + dashboard app.</p>
-        <p class="meta">Tech: Django, HTML, CSS</p>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4>Backend</h4>
+          <p class="muted">Python, Django, Django REST Framework, REST APIs, Auth</p>
+        </div>
+        <div class="skill-card">
+          <h4>Database</h4>
+          <p class="muted">PostgreSQL, SQLite, ORM, schema design</p>
+        </div>
+        <div class="skill-card">
+          <h4>AI Agents</h4>
+          <p class="muted">LangChain, LangGraph, CrewAI, tool calling, routing</p>
+        </div>
+        <div class="skill-card">
+          <h4>Tools</h4>
+          <p class="muted">Git/GitHub, Swagger/OpenAPI, Deployment</p>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="card">
-      <h3>Contact</h3>
-      <p>Email: <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></p>
-      <p>GitHub: <a href="#" target="_blank">Your GitHub</a></p>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="section-head">
+        <h2>About</h2>
+      </div>
+      <div class="about">
+        <p>
+          I’m <strong>Pavan Gottipati</strong>, a Python developer focused on building scalable backend systems using Django + DRF.
+          Currently, I’m building real projects (not tutorials) — APIs, dashboards, and AI agent workflows.
+        </p>
+        <p class="muted">
+          My goal: get hired as a Full-stack Django / Python Developer and grow into an AI-driven software engineer.
+        </p>
+      </div>
     </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p class="muted">If you want a developer who builds real things — message me.</p>
+      </div>
+
+      <div class="contact-card">
+        <div>
+          <p class="muted">Email</p>
+          <p><a class="link" href="mailto:gottipatipavankumar7@gmail.com">gottipatipavankumar7@gmail.com</a></p>
+        </div>
+        <div>
+          <p class="muted">GitHub</p>
+          <p><a class="link" target="_blank" rel="noopener" href="https://github.com/pavananiruddha">github.com/pavananiruddha</a></p>
+        </div>
+        <div>
+          <p class="muted">LinkedIn</p>
+          <p><a class="link" target="_blank" rel="noopener" href="https://www.linkedin.com/in/pavan-gottipati-95a0242bb">linkedin.com/in/pavan-gottipati</a></p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Pavan Aniruddha</p>
+    <p>© <span id="year"></span> Pavan Gottipati · Built with HTML/CSS/JS · Hosted on GitHub Pages</p>
   </footer>
 
   <script src="script.js"></script>
