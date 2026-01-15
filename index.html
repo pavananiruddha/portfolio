@@ -3,186 +3,326 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pavan Gottipati | Full-Stack Django + Python Developer</title>
-  <meta name="description" content="Portfolio of Pavan Gottipati — Full-Stack Django + Python Developer building production-ready apps and AI agent systems." />
-  <meta name="keywords" content="Pavan Gottipati, Django Developer, Python Developer, LangChain, LangGraph, Portfolio" />
-  <meta name="author" content="Pavan Gottipati" />
+
+  <title>Pavan Kumar Gottipati | Full-Stack Python Engineer</title>
+  <meta name="description" content="Portfolio of Pavan Kumar Gottipati — Full-Stack Python Engineer specialized in Django/DRF backend systems and AI-driven workflows using LangChain/LangGraph and Gemini API." />
+  <meta name="keywords" content="Pavan Kumar Gottipati, Python Developer, Django Developer, DRF, PostgreSQL, Celery, Redis, LangChain, LangGraph, Gemini API, Backend Engineer" />
+  <meta name="author" content="Pavan Kumar Gottipati" />
+
+  <meta property="og:title" content="Pavan Kumar Gottipati | Full-Stack Python Engineer" />
+  <meta property="og:description" content="Production-grade APIs + scalable AI workflows using Django/DRF, PostgreSQL, Docker, Celery/Redis, LangChain/LangGraph." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3EP%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- NAV -->
+  <!-- NAVBAR -->
   <header class="nav">
     <div class="nav-inner">
-      <a class="brand" href="#">PG</a>
-      <nav class="links">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-badge">PG</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#architecture">Architecture</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="nav-cta" href="#contact">Hire / Contact</a>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme" title="Toggle theme">
+          <span id="themeIcon" aria-hidden="true">🌙</span>
+        </button>
+        <a class="btn small" href="#contact">Hire / Contact</a>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-
+  <main id="top" class="container">
     <!-- HERO -->
     <section class="hero">
       <div class="hero-left">
-        <p class="pill">Open to Internships · Fresher · Junior Roles</p>
-        <h1>
-          Full-Stack Django + Python Developer
+        <div class="hero-pill">
+          <span class="dot"></span>
+          Open to Work — Intern / Fresher / Junior Roles
+        </div>
+
+        <h1 class="hero-title">
+          Full-Stack <span class="accent">Python Engineer</span><br />
+          building backend systems and AI workflows.
         </h1>
-        <p class="subtitle">
-          I build production-ready APIs, full-stack web apps, and AI agent workflows using
-          <strong>Django</strong>, <strong>PostgreSQL</strong>, <strong>DRF</strong>, and
-          <strong>LangChain/LangGraph</strong>.
+
+        <p class="hero-subtitle">
+          I engineer production-grade APIs and scalable automation using
+          <strong>Python</strong>, <strong>Django/DRF</strong>, <strong>PostgreSQL</strong>,
+          <strong>Docker</strong>, and AI tooling like <strong>LangChain/LangGraph</strong> with the <strong>Gemini API</strong>.
+          <br /><br />
+          I don’t build tutorials — I build systems with <strong>architecture</strong>, <strong>security</strong>, and <strong>performance</strong>.
         </p>
 
         <div class="cta-row">
-          <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
-          <a class="btn outline" href="https://github.com/pavananiruddha" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn outline" href="https://www.linkedin.com/in/pavan-gottipati-95a0242bb" target="_blank" rel="noopener">LinkedIn</a>
+          <!-- resume later -->
+          <a class="btn" href="#" id="resumeBtn" title="Add resume.pdf later">Resume (Soon)</a>
+          <a class="btn outline" target="_blank" rel="noopener" href="https://github.com/pavananiruddha">GitHub</a>
+          <a class="btn outline" target="_blank" rel="noopener" href="https://www.linkedin.com/in/pavan-gottipati-95a0242bb">LinkedIn</a>
         </div>
 
-        <div class="stats">
-          <div class="stat">
-            <div class="stat-num">3+</div>
-            <div class="stat-label">Projects (building)</div>
+        <div class="proof-strip">
+          <div class="proof">
+            <div class="proof-title">Auth + RBAC</div>
+            <div class="proof-sub">JWT, protected endpoints</div>
           </div>
-          <div class="stat">
-            <div class="stat-num">Python</div>
-            <div class="stat-label">Backend focus</div>
+          <div class="proof">
+            <div class="proof-title">Backend Performance</div>
+            <div class="proof-sub">Query optimization mindset</div>
           </div>
-          <div class="stat">
-            <div class="stat-num">AI Agents</div>
-            <div class="stat-label">LangChain / LangGraph</div>
+          <div class="proof">
+            <div class="proof-title">AI Workflows</div>
+            <div class="proof-sub">LangChain / LangGraph</div>
           </div>
         </div>
       </div>
 
-      <div class="hero-right">
-        <div class="card big">
-          <p class="card-title">Currently building</p>
-          <h3>Job Application Tracker API</h3>
+      <aside class="hero-right">
+        <div class="card featured-card">
+          <div class="featured-top">
+            <span class="chip built">✅ Built</span>
+            <span class="muted small">Featured Project</span>
+          </div>
+
+          <h3 class="featured-title">Job Application Tracker API</h3>
+
           <p class="muted">
-            A backend system to track job applications, interviews, and follow-ups with secure auth and structured APIs.
+            A secure REST API to track job applications, interviews, and follow-ups with clean endpoints,
+            RBAC, and performance-focused database design.
           </p>
 
           <div class="tags">
+            <span>Python</span>
             <span>Django REST</span>
-            <span>JWT Auth</span>
             <span>PostgreSQL</span>
-            <span>Swagger</span>
+            <span>JWT</span>
+            <span>Docker</span>
           </div>
 
-          <div class="card-actions">
+          <div class="featured-actions">
             <a class="link" target="_blank" rel="noopener"
-               href="https://github.com/pavananiruddha/job-application-tracker-backend">
+              href="https://github.com/pavananiruddha/job-application-tracker-backend">
               View Repo →
             </a>
           </div>
         </div>
-      </div>
+      </aside>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust-strip" aria-label="Key strengths">
+      <div class="trust-item">🧠 Backend Systems</div>
+      <div class="trust-item">🔐 JWT + RBAC</div>
+      <div class="trust-item">⚡ Optimized APIs</div>
+      <div class="trust-item">🧩 AI Agent Workflows</div>
+      <div class="trust-item">🐳 Docker</div>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
       <div class="section-head">
         <h2>Featured Projects</h2>
-        <p class="muted">Not random projects — these are built to prove real backend + full-stack ability.</p>
+        <p class="muted">
+          Real engineering problems → scalable solutions. Built with production thinking.
+        </p>
       </div>
 
       <div class="projects-grid">
-
-        <!-- Featured -->
+        <!-- Featured wide -->
         <article class="project featured">
-          <div>
-            <p class="project-kicker">FEATURED</p>
-            <h3>Job Application Tracker – Backend API</h3>
+          <div class="project-main">
+            <div class="project-header">
+              <p class="kicker">FOUNDATION</p>
+              <span class="chip built">✅ Built</span>
+            </div>
+
+            <h3>Job Application Tracker API</h3>
             <p class="muted">
-              Backend API to manage job applications with authentication, clean endpoints, and structured data models.
+              A production-ready backend API that solves messy manual job tracking by providing secure,
+              scalable, structured endpoints with RBAC.
             </p>
 
             <ul class="bullets">
-              <li>JWT authentication + protected routes</li>
-              <li>CRUD APIs with validation + clean responses</li>
-              <li>Ready for frontend integration</li>
+              <li>Implemented <strong>custom JWT authentication</strong> + protected routes</li>
+              <li>Added <strong>Role-Based Access Control (RBAC)</strong> for multi-user workflow</li>
+              <li>Built filtering + pagination and optimized ORM queries for speed</li>
             </ul>
 
             <div class="tags">
-              <span>Python</span>
-              <span>Django</span>
-              <span>DRF</span>
+              <span>Django REST Framework</span>
               <span>PostgreSQL</span>
               <span>JWT</span>
-              <span>Swagger</span>
+              <span>Docker</span>
+              <span>API Design</span>
             </div>
           </div>
 
           <div class="project-actions">
-            <a class="btn small outline" href="https://github.com/pavananiruddha/job-application-tracker-backend" target="_blank" rel="noopener">GitHub</a>
-            <a class="btn small" href="#contact">Request Demo</a>
+            <a class="btn small outline" target="_blank" rel="noopener"
+              href="https://github.com/pavananiruddha/job-application-tracker-backend">GitHub</a>
+            <a class="btn small" href="#contact">Contact</a>
           </div>
         </article>
 
-        <!-- Placeholder 2 -->
+        <!-- Project B -->
         <article class="project">
-          <h3>AI Agent System (LangGraph Workflow)</h3>
-          <p class="muted">
-            Multi-agent routing workflow using LangGraph with tool-calling and structured outputs.
-          </p>
-          <div class="tags">
-            <span>Python</span><span>LangChain</span><span>LangGraph</span><span>CrewAI</span>
+          <div class="project-header">
+            <p class="kicker">FLAGSHIP</p>
+            <span class="chip inprogress">🟡 In Progress</span>
           </div>
+
+          <h3>AI Resume Screening Platform</h3>
+          <p class="muted">
+            Automates resume screening: parses PDFs, extracts skills, matches job descriptions, and outputs
+            an explainable score (0–100).
+          </p>
+
+          <div class="mini-split">
+            <div class="mini">
+              <div class="mini-title">Key Engineering</div>
+              <ul class="mini-list">
+                <li>Async pipeline using <strong>Celery + Redis</strong></li>
+                <li>Gemini + LangChain structured extraction</li>
+                <li>Explainable scoring (not black-box)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span>Django</span><span>React</span><span>Gemini API</span><span>LangChain</span><span>Celery</span><span>Redis</span>
+          </div>
+
           <div class="project-actions">
-            <a class="btn small outline" href="#" target="_blank" rel="noopener">GitHub (soon)</a>
-            <a class="btn small outline" href="#" target="_blank" rel="noopener">Demo (soon)</a>
+            <a class="btn small outline" href="#" aria-disabled="true" title="Add repo later">Repo (Soon)</a>
+            <a class="btn small outline" href="#" aria-disabled="true" title="Add demo later">Demo (Soon)</a>
           </div>
         </article>
 
-        <!-- Placeholder 3 -->
+        <!-- Project C -->
         <article class="project">
-          <h3>Django Full-Stack Dashboard App</h3>
-          <p class="muted">
-            Authentication + dashboard UI + CRUD + search/pagination for real-world web app workflow.
-          </p>
-          <div class="tags">
-            <span>Django</span><span>HTML</span><span>CSS</span><span>PostgreSQL</span>
+          <div class="project-header">
+            <p class="kicker">ADVANCED</p>
+            <span class="chip planned">🟣 Planned</span>
           </div>
+
+          <h3>Autonomous Support Ticket Agent</h3>
+          <p class="muted">
+            Event-driven AI agent that triages support tickets, routes workflows, and generates structured
+            responses using LangGraph orchestration.
+          </p>
+
+          <div class="mini-split">
+            <div class="mini">
+              <div class="mini-title">Key Engineering</div>
+              <ul class="mini-list">
+                <li>LangGraph workflow state machine</li>
+                <li>Event-driven architecture</li>
+                <li>Tool calling + routing by priority</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span>LangGraph</span><span>Django</span><span>Gemini API</span><span>Event-Driven</span>
+          </div>
+
           <div class="project-actions">
-            <a class="btn small outline" href="#" target="_blank" rel="noopener">GitHub (soon)</a>
-            <a class="btn small outline" href="#" target="_blank" rel="noopener">Live (soon)</a>
+            <a class="btn small outline" href="#" aria-disabled="true" title="Add repo later">Repo (Soon)</a>
+            <a class="btn small outline" href="#" aria-disabled="true" title="Add diagram later">Workflow (Soon)</a>
           </div>
         </article>
-
       </div>
     </section>
 
     <!-- SKILLS -->
     <section id="skills" class="section">
       <div class="section-head">
-        <h2>Skills</h2>
-        <p class="muted">Focused on backend engineering + AI agent workflows.</p>
+        <h2>Engineering Stack</h2>
+        <p class="muted">What I use to build scalable systems.</p>
       </div>
 
       <div class="skills-grid">
         <div class="skill-card">
-          <h4>Backend</h4>
-          <p class="muted">Python, Django, Django REST Framework, REST APIs, Auth</p>
+          <h4>Backend Engineering</h4>
+          <p class="muted">
+            Python, Django, Django REST Framework, REST APIs, JWT Auth, RBAC, request validation.
+          </p>
         </div>
+
         <div class="skill-card">
           <h4>Database</h4>
-          <p class="muted">PostgreSQL, SQLite, ORM, schema design</p>
+          <p class="muted">
+            PostgreSQL, ORM optimization, scalable filtering/pagination, schema-first thinking.
+          </p>
         </div>
+
         <div class="skill-card">
-          <h4>AI Agents</h4>
-          <p class="muted">LangChain, LangGraph, CrewAI, tool calling, routing</p>
+          <h4>AI & Agents</h4>
+          <p class="muted">
+            Gemini API, LangChain, LangGraph, structured outputs, workflow automation.
+          </p>
         </div>
+
         <div class="skill-card">
-          <h4>Tools</h4>
-          <p class="muted">Git/GitHub, Swagger/OpenAPI, Deployment</p>
+          <h4>Production Tooling</h4>
+          <p class="muted">
+            Docker, Git/GitHub, API documentation (Swagger/OpenAPI), async task pipelines.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE -->
+    <section id="architecture" class="section">
+      <div class="section-head">
+        <h2>How I build</h2>
+        <p class="muted">Architecture mindset that separates me from “tutorial devs”.</p>
+      </div>
+
+      <div class="arch-grid">
+        <div class="arch-card">
+          <h3>Engineering Principles</h3>
+          <ul class="checklist">
+            <li><span>✅</span> Clean boundaries (API → service → data)</li>
+            <li><span>✅</span> Security-first auth systems (JWT/RBAC)</li>
+            <li><span>✅</span> Performance awareness (query optimization, pagination)</li>
+            <li><span>✅</span> Async processing for heavy workloads (Celery/Redis)</li>
+            <li><span>✅</span> AI output must be structured + explainable</li>
+          </ul>
+        </div>
+
+        <div class="arch-diagram">
+          <div class="diagram-title">Reference Architecture</div>
+          <pre class="diagram" aria-label="Architecture diagram">
+Client (Web/App)
+      |
+      v
+Django REST API
+  |        |
+  |        +--> Auth (JWT + RBAC)
+  |
+  +--> Service Layer
+          |
+          v
+      PostgreSQL
+          |
+          +--> Celery Workers ---> Redis Queue
+          |
+          +--> AI Pipeline -----> Gemini API
+          </pre>
+          <p class="muted small">
+            I focus on modular design so features don’t become spaghetti when scaling.
+          </p>
         </div>
       </div>
     </section>
@@ -192,45 +332,76 @@
       <div class="section-head">
         <h2>About</h2>
       </div>
-      <div class="about">
-        <p>
-          I’m <strong>Pavan Gottipati</strong>, a Python developer focused on building scalable backend systems using Django + DRF.
-          Currently, I’m building real projects (not tutorials) — APIs, dashboards, and AI agent workflows.
-        </p>
-        <p class="muted">
-          My goal: get hired as a Full-stack Django / Python Developer and grow into an AI-driven software engineer.
-        </p>
+
+      <div class="about-card">
+        <div class="about-main">
+          <h3>Pavan Kumar Gottipati</h3>
+          <p class="muted">
+            I’m a fresher developer focused on backend engineering and AI workflows.
+            My portfolio is built to demonstrate what recruiters actually care about:
+            <strong>systems</strong>, not certificates.
+          </p>
+
+          <div class="about-tags">
+            <span>Security</span>
+            <span>Maintainability</span>
+            <span>Scalability</span>
+            <span>Shipping</span>
+          </div>
+        </div>
+
+        <div class="about-side">
+          <div class="mini-card">
+            <div class="mini-card-title">Target Roles</div>
+            <p class="muted">Python Backend Developer · Full-Stack Python Developer · AI Engineer</p>
+          </div>
+
+          <div class="mini-card">
+            <div class="mini-card-title">Location</div>
+            <p class="muted">India (Open to remote)</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p class="muted">If you want a developer who builds real things — message me.</p>
+      <div class="contact-cta">
+        <div>
+          <h2>Let’s build something real.</h2>
+          <p class="muted">
+            If you’re hiring for backend systems or AI automation roles, I can contribute immediately.
+            Reach out and I’ll respond fast.
+          </p>
+        </div>
+
+        <a class="btn" href="mailto:gottipatipavankumar7@gmail.com">Email Me</a>
       </div>
 
-      <div class="contact-card">
-        <div>
-          <p class="muted">Email</p>
-          <p><a class="link" href="mailto:gottipatipavankumar7@gmail.com">gottipatipavankumar7@gmail.com</a></p>
+      <div class="contact-grid">
+        <div class="contact-tile">
+          <div class="tile-label">Email</div>
+          <a class="tile-value link" href="mailto:gottipatipavankumar7@gmail.com">gottipatipavankumar7@gmail.com</a>
         </div>
-        <div>
-          <p class="muted">GitHub</p>
-          <p><a class="link" target="_blank" rel="noopener" href="https://github.com/pavananiruddha">github.com/pavananiruddha</a></p>
+
+        <div class="contact-tile">
+          <div class="tile-label">GitHub</div>
+          <a class="tile-value link" target="_blank" rel="noopener" href="https://github.com/pavananiruddha">github.com/pavananiruddha</a>
         </div>
-        <div>
-          <p class="muted">LinkedIn</p>
-          <p><a class="link" target="_blank" rel="noopener" href="https://www.linkedin.com/in/pavan-gottipati-95a0242bb">linkedin.com/in/pavan-gottipati</a></p>
+
+        <div class="contact-tile">
+          <div class="tile-label">LinkedIn</div>
+          <a class="tile-value link" target="_blank" rel="noopener" href="https://www.linkedin.com/in/pavan-gottipati-95a0242bb">
+            linkedin.com/in/pavan-gottipati
+          </a>
         </div>
       </div>
     </section>
 
+    <footer class="footer">
+      <p>© <span id="year"></span> Pavan Kumar Gottipati · Built with HTML/CSS/JS · Hosted on GitHub Pages</p>
+    </footer>
   </main>
-
-  <footer class="footer">
-    <p>© <span id="year"></span> Pavan Gottipati · Built with HTML/CSS/JS · Hosted on GitHub Pages</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
